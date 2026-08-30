@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Rekomendasi dan ulasan produk terbaik untuk kebutuhan harian Anda." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen font-sans">
+    <!-- Header / Navbar -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+          <span class="bg-primary-600 text-white w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-sm">R</span>
+          RekomendasiTekno
+        </a>
+        <nav class="flex gap-6 text-sm font-medium text-slate-600">
+          <a href="/" class="hover:text-primary-600 transition">Beranda</a>
+          <a href="/#review" class="hover:text-primary-600 transition">Review Terbaru</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-8">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12 border-t border-slate-800">
+      <div class="max-w-6xl mx-auto px-4 text-center md:text-left md:flex justify-between items-center gap-4">
+        <div>
+          <p class="font-semibold text-white">RekomendasiTekno &copy; 2026</p>
+          <p class="text-xs text-slate-500 mt-1">Situs ulasan independen. Kami mungkin menerima komisi dari pembelian melalui link afiliasi.</p>
+        </div>
+        <div class="mt-4 md:mt-0 text-xs text-slate-500">
+          Dibuat dengan Astro & Tailwind CSS
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
