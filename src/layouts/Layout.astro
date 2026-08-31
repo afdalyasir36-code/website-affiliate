@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Rekomendasi dan ulasan produk terbaik untuk kebutuhan harian Anda." } = Astro.props;
+const { title, description = "Rekomendasi dan ulasan produk pilihan terbaik untuk semua kebutuhan Anda." } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,12 +22,12 @@ const { title, description = "Rekomendasi dan ulasan produk terbaik untuk kebutu
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
       <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <a href="/" class="text-xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-          <span class="bg-primary-600 text-white w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-sm">R</span>
-          RekomendasiTekno
+          <span class="bg-amber-500 text-slate-950 w-8 h-8 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-sm">C</span>
+          CariBarang<span class="text-amber-500">.id</span>
         </a>
         <nav class="flex gap-6 text-sm font-medium text-slate-600">
-          <a href="/" class="hover:text-primary-600 transition">Beranda</a>
-          <a href="/#review" class="hover:text-primary-600 transition">Review Terbaru</a>
+          <a href="/" class="hover:text-amber-600 transition">Beranda</a>
+          <a href="/#review" class="hover:text-amber-600 transition">Semua Produk</a>
         </nav>
       </div>
     </header>
@@ -41,8 +41,8 @@ const { title, description = "Rekomendasi dan ulasan produk terbaik untuk kebutu
     <footer class="bg-slate-900 text-slate-400 py-10 mt-12 border-t border-slate-800">
       <div class="max-w-6xl mx-auto px-4 text-center md:text-left md:flex justify-between items-center gap-4">
         <div>
-          <p class="font-semibold text-white">RekomendasiTekno &copy; 2026</p>
-          <p class="text-xs text-slate-500 mt-1">Situs ulasan independen. Kami mungkin menerima komisi dari pembelian melalui link afiliasi.</p>
+          <p class="font-semibold text-white">CariBarang.id &copy; 2026</p>
+          <p class="text-xs text-slate-500 mt-1">Situs ulasan dan rekomendasi produk independen. Kami dapat menerima komisi dari pembelian melalui link afiliasi.</p>
         </div>
         <div class="mt-4 md:mt-0 text-xs text-slate-500">
           Dibuat dengan Astro & Tailwind CSS
