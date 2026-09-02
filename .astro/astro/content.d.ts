@@ -146,14 +146,21 @@ declare module 'astro:content' {
   slug: "review-asus-vivobook-14";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 "review-hp-samsung.md": {
 	id: "review-hp-samsung.md";
   slug: "review-hp-samsung";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"review-sunscreen.md": {
+	id: "review-sunscreen.md";
+  slug: "review-sunscreen";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
 
@@ -165,5 +172,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("./../../src/content/config.js");
 }
