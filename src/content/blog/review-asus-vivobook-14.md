@@ -2,7 +2,7 @@
 title: "Review Asus Vivobook 14: Laptop Mahasiswa Terbaik 2026?"
 description: "Ulasan mendalam performa, baterai, dan harga Asus Vivobook 14 untuk kebutuhan tugas kuliah dan multitasking."
 pubDate: 2026-08-25
-category: "Laptop"
+category: "Elektronik"
 rating: 4.8
 heroImage: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80"
 affiliateLink: "https://shopee.co.id"
