@@ -17,6 +17,13 @@ posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   </section>
 
   <!-- Article Grid Section -->
+  <!-- Filter Kategori Tombol -->
+<div class="flex flex-wrap gap-2 mb-8">
+  <a href="/" class="bg-slate-900 text-white text-sm font-semibold px-4 py-2 rounded-xl">Semua Produk</a>
+  <a href="/category/elektronik" class="bg-white border border-slate-200 text-slate-700 hover:border-amber-500 hover:text-amber-600 text-sm font-semibold px-4 py-2 rounded-xl transition">Elektronik</a>
+  <a href="/category/beauty" class="bg-white border border-slate-200 text-slate-700 hover:border-amber-500 hover:text-amber-600 text-sm font-semibold px-4 py-2 rounded-xl transition">Kecantikan</a>
+  <a href="/category/rumah-tangga" class="bg-white border border-slate-200 text-slate-700 hover:border-amber-500 hover:text-amber-600 text-sm font-semibold px-4 py-2 rounded-xl transition">Rumah Tangga</a>
+</div>
   <section id="review">
     <div class="flex items-center justify-between mb-6">
       <h2 class="text-2xl font-bold text-slate-900">Ulasan & Rekomendasi Terbaru</h2>
@@ -31,7 +38,9 @@ posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
           <div class="p-5 flex-grow flex flex-col justify-between">
             <div>
               <div class="flex items-center gap-2 mb-2">
-                <span class="bg-slate-100 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full">{post.data.category}</span>
+              <a href={`/category/${post.data.category.toLowerCase()}`} class="bg-slate-100 hover:bg-amber-100 hover:text-amber-700 text-slate-700 text-xs font-medium px-2.5 py-0.5 rounded-full transition">
+  {post.data.category}
+</a>
                 <span class="text-xs text-amber-500 font-bold">★ {post.data.rating}</span>
               </div>
               <h3 class="text-lg font-bold text-slate-900 leading-snug hover:text-primary-600 transition">
